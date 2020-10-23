@@ -1,0 +1,49 @@
+.start-btn {
+  min-width: 230px;
+  position: relative;
+  padding: 10px 80px 10px 43px;
+  text-align: left;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.15em;
+  color: #FAFAFA;
+  background: linear-gradient(90deg, #0487D9 0%, #049DD9 100%);
+  border-radius: 100px;
+  border: 3px solid transparent;
+  transition: all .3s ease;
+}
+
+.start-btn-arrow {
+  display: block;
+  width: 48px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+.start-btn:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.start-btn:active {
+  border: 3px solid #049DD9;
+  color: #474747;
+  background: #FFFFFF;
+  transition: all .3s ease;
+}
+
+.start-btn-arrow {
+  fill: #FAFAFA;
+  transition: all .3s ease;
+}
+
+.start-btn:active .start-btn-arrow {
+  fill: #474747;
+  transition: all .3s ease;
+}
