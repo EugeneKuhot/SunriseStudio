@@ -27,7 +27,7 @@
 .header__phone-block {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .header__phone {
@@ -38,6 +38,14 @@
   line-height: 22px;
   letter-spacing: 0.05em;
   color: #202020;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.header__phone:hover,
+.header__phone:focus {
+  color: #0487D9;
+  transition: all .3s ease;
 }
 
 .header__start-btn {
@@ -49,7 +57,6 @@
   border-left: 1px solid #0487D9;
   border-right: 1px solid #0487D9;
   background: #FFFFFF;
-  color: #0487D9;
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -57,6 +64,8 @@
   line-height: 22px;
   letter-spacing: 0.05em;
   color: #0487D9;
+  transition: all .3s ease;
+  cursor: pointer;
 }
 
 .header__start-btn-plus {
@@ -66,6 +75,22 @@
   left: 15px;
   top: 50%;
   transform: translateY(-30%);
+  fill: #0487D9;
+  transition: all .3s ease;
+}
+
+.header__start-btn:hover,
+.header__start-btn:focus {
+  color: #474747;
+  border-left: 1px solid #474747;
+  border-right: 1px solid #474747;
+  transition: all .3s ease;
+}
+
+.header__start-btn:hover .header__start-btn-plus,
+.header__start-btn:focus .header__start-btn-plus {
+  fill: #474747;
+  transition: all .3s ease;
 }
 
 .header__lang-btn {
@@ -83,6 +108,14 @@
   letter-spacing: 0.05em;
   text-transform: capitalize;
   color: #202020;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.header__lang-btn:hover,
+.header__lang-btn:focus {
+  opacity: .6;
+  transition: all .3s ease;
 }
 
 .header__lang-btn-icon {
