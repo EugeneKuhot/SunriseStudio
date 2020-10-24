@@ -30,3 +30,39 @@
 a {
   text-decoration: none;
 }
+
+h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  color: #202020;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+}
+
+input[type="checkbox"] + label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('../img/svg/check-off.svg') no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: url('../img/svg/check-on.svg') no-repeat;
+  position: absolute;
+  left: 0;
+}

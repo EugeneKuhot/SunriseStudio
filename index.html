@@ -58,6 +58,10 @@
         d="M47.91 4.85356C48.1053 4.6583 48.1053 4.34171 47.91 4.14645L44.7281 0.96447C44.5328 0.769208 44.2162 0.769208 44.021 0.96447C43.8257 1.15973 43.8257 1.47631 44.021 1.67158L46.8494 4.5L44.021 7.32843C43.8257 7.52369 43.8257 7.84028 44.0209 8.03554C44.2162 8.2308 44.5328 8.2308 44.7281 8.03554L47.91 4.85356ZM0.257858 5L47.5565 5L47.5565 4L0.257858 4L0.257858 5Z"
         />
     </symbol>
+    <symbol id="cross" width="25" height="25" viewBox="0 0 25 25">
+      <path d="M3.8147e-06 2.94595L2.94595 0L12.5 9.55402L22.0541 0L25 2.94595L15.446 12.5L25 22.0541L22.0541 25L12.5
+      15.446L2.94601 25L6.86646e-05 22.0541L9.55402 12.5L3.8147e-06 2.94595Z"/>
+    </symbol>
 
   </svg>
 </div>
@@ -100,39 +104,44 @@
     </div>
   </div>
 
+  <div class="contact-form__wrap">
+    <div class="container">
+      <form action="#" method="#" class="contact-form">
+        <h2>Контакты</h2>
+        <p class="contact-form__desc">Заполните форму обратной связи и наш содтрудник свяжется с вами.<br/>
+          Также вы можете прикрепить файл с вашим проектом что бы мы поняли ваш проект лучше.</p>
 
-  <div hidden>
-    <ul>
-      <li>
-        <a href="#">Услуги</a>
-      </li>
-      <li>
-        <a href="#">Портфолио</a>
-      </li>
-      <li>
-        <a href="#">О нас</a>
-      </li>
-      <li>
-        <a href="#">Контакты</a>
-      </li>
-    </ul>
+        <div class="contact-form__input-wrap">
+          <input type="text" placeholder="Имя" required class="contact-form__text-input">
+          <input type="email" placeholder="Электронная почта" required class="contact-form__text-input">
+          <input type="tel" placeholder="Номер телефона" required class="contact-form__text-input">
+          <input type="text" placeholder="Название компании" class="contact-form__text-input">
+        </div>
 
-    <form action="#" method="#">
-      <h2>У вас есть к нам вопросы?</h2>
+        <input id="policy" type="checkbox">
+        <label for="policy" class="contact-form__label">Я согласен на обработку моих персональных данных и ознакомился с
+          политикой обработки персональных данных.
+        </label>
 
-      <input type="text" placeholder="Имя" required>
-      <input type="email" placeholder="Электронная почта" required>
-      <input type="tel" placeholder="+38 0__ ___-__-__" required>
-      <input type="text" placeholder="Название компании">
+        <div class="contact-form__file-wrap">
+          <input type="file" id="avatar" name="avatar">
+          <label class="ad-form-header__drop-zone" for="avatar">Загрузить<br>фото...</label>
+        </div>
 
-      <input id="policy" type="checkbox">
-      <label for="policy">Я согласен на обработку моих персональных данных и ознакомился с политикой обработки
-        персональных данных.
-      </label>
+        <button type="submit" class="start-btn">
+          Поехали!
+          <svg class="start-btn-arrow">
+            <use xlink:href="#arrow"></use>
+          </svg>
+        </button>
+      </form>
 
-      <button type="submit">Поехали!</button>
-
-    </form>
+      <button class="close-btn">
+        <svg>
+          <use xlink:href="#cross"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
