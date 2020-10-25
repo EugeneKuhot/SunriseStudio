@@ -1,16 +1,54 @@
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  min-height: 700px;
   background-color: #202020;
 }
 
 .footer__title-block {
+  display: flex;
+  align-items: center;
+  height: 35%;
   background-color: #FFFFFF;
 }
 
+.footer .contact-form {
+  min-height: 330px;
+}
+
+.footer .contact-form__text-input {
+  border-bottom: 1px solid #FAFAFA;
+}
+
+.footer .contact-form__text-input::placeholder,
+.footer .contact-form__label,
+.footer .contact-form__file-label {
+  color: #8d8d8d;
+}
+
+.footer .contact-form__paperclip {
+  fill: #8d8d8d;
+}
+
+.footer .contact-form__text-input {
+  color: #FAFAFA;
+}
+
 .footer__copyright-wrap {
+  height: 100px;
+}
+
+.footer__copyright-wrap .container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .footer__copyright {
+  width: auto;
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -18,4 +56,34 @@
   line-height: 17px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .phone-block {
+  width: auto;
+}
+
+.footer__copyright-wrap .phone {
+  color: #FFFFFF;
+}
+
+.footer .lang-btn {
+  width: 120px;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.footer .lang-btn-icon {
+  fill: #FFFFFF;
+}
+
+.lang-symbol {
+  text-decoration: underline;
+}
+
+.footer .contact-form__label::before {
+  background: url('../img/svg/check-off-footer.svg') no-repeat;
+}
+
+#footer-policy:checked + .contact-form__label::before {
+  background: url('../img/svg/check-on-footer.svg') no-repeat;
 }
