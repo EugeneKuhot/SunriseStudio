@@ -1,5 +1,5 @@
 .greetings {
-  min-height: 450px;
+  min-height: 540px;
   height: calc(100vh - 112px);
   background: #fafafa;
 }
@@ -15,18 +15,18 @@
 
 .greetings__background-wrap {
   height: 100%;
-  background: url('../img/png/mockup-mobile.png') no-repeat 300% 1000%,
-              url('../img/png/mockup-pen.png') no-repeat -200% -2000%,
-              url('../img/png/mockup-tablet.png') no-repeat 1000% 70%,
-              url('../img/png/mockup-mobile2.png') no-repeat -1170% -4000%;
 }
 
-.greetings__background-wrap.onload {
-  background: url('../img/png/mockup-mobile.png') no-repeat 80% 15%,
-              url('../img/png/mockup-pen.png') no-repeat 90% 60%,
-              url('../img/png/mockup-tablet.png') no-repeat 82% 50%,
-              url('../img/png/mockup-mobile2.png') no-repeat 70% 90%;
-  transition: all 1.5s ease;
+.greetings__devices-img {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all 1s ease;
+}
+
+.greetings__devices-img.onload {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease;
 }
 
 .greetings__desc-block {
@@ -41,14 +41,16 @@
   width: 67px;
   height: 5px;
   position: absolute;
-  left: -1000px;
-  top: 0;
+  left: 0;
+  top: 100px;
   background: #0487D9;
+  opacity: 0;
   transition: all .3s ease;
 }
 
 .greetings__desc-block.onload::before {
-  left: 0;
+  top: 0;
+  opacity: 1;
   transition: all .3s ease;
 }
 

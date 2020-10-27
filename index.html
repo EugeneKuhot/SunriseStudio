@@ -172,7 +172,7 @@
         </div>
 
         <a href="tel:+48575932071" class="phone active js-poland-phone">+48 575 93-20-71</a>
-        <a href="tel:+380966058797" class="phone js-ukraine-phone">+38 096 605-87-97</a>
+        <a href="tel:+380966058797" class="phone js-ukraine-phone">+38 937 99-92</a>
       </div>
 
       <button class="header__start-btn">
@@ -247,9 +247,9 @@
     </div>
   </div>
 </header>
-
-<section class="greetings">
-  <div class="greetings__background-wrap">
+<main>
+  <section class="greetings">
+    <div class="greetings__background-wrap">
     <div class="greetings__wrap container">
       <div class="greetings__desc-block">
         <p class="greetings__text">помогаем развивать бизнес</p>
@@ -267,6 +267,8 @@
         </button>
       </div>
 
+      <img src="img/png/mockup.png" alt="Devices" class="greetings__devices-img">
+
       <ul class="greetings__mouse-icon-wrap">
         <li>
           <svg class="greetings__mouse-icon" width="20px" height="35px" viewBox="30.5 -9.5 554 813"
@@ -279,57 +281,55 @@
       </ul>
     </div>
   </div>
-</section>
+  </section>
 
-<section class="stages">
-  <div class="container">
+  <section class="stages">
+    <div class="container">
 
-    <div class="stages__items__wrap">
-      <div class="stages__item">
-        <div class="stages__desc-wrap">
-          <h2 class="stages__title">Комплексный подход</h2>
-          <p class="stages__text">
-            Помогаем чётко определить бизнес-цели<br/>
-            и следовать верному пути для их достижения.
-          </p>
+      <div class="stages__items__wrap">
+        <div class="stages__item">
+          <div class="stages__desc-wrap">
+            <h2 class="stages__title">Комплексный подход</h2>
+            <p class="stages__text">
+              Помогаем чётко определить бизнес-цели<br/>
+              и следовать верному пути для их достижения.
+            </p>
 
-          <blockquote class="stages__blockquote">
-            <svg class="quotes open-quote">
-              <use xlink:href="#quotes"></use>
-            </svg>
-            Хорошо сформулированная задача – это наполовину решенная задача». —
-            так говорил американский инженер-изобретатель Чарлз Кеттеринг. Поэтому
-            мы уделяем особое внимание первичным, вторичным исследованиям, UX-проектированию, и дизайн концепциям для
-            получения превосходного результата
-            <svg class="quotes close-quote">
-              <use xlink:href="#quotes"></use>
-            </svg>
-          </blockquote>
-          <cite>
-            <span class="stages__position">UX/UI-designer</span><br/>
-            <span class="stages__name">Артём Демидов</span>
-          </cite>
+            <blockquote class="stages__blockquote">
+              <svg class="quotes open-quote">
+                <use xlink:href="#quotes"></use>
+              </svg>
+              «Хорошо сформулированная задача – это наполовину решенная задача». —
+              так говорил американский инженер-изобретатель Чарлз Кеттеринг. Поэтому
+              мы уделяем особое внимание первичным, вторичным исследованиям, UX-проектированию, и дизайн концепциям для
+              получения превосходного результата
+            </blockquote>
+            <cite>
+              <span class="stages__position">UX/UI-designer</span><br/>
+              <span class="stages__name">Петр Петров</span>
+            </cite>
+          </div>
+
         </div>
-
-        <img src="img/png/demidov.png" alt="Designer Artem Demidov" class="stages__photo">
       </div>
+
+
+      <ul class="stages__tab-list">
+        <li>
+          <button class="stages__tab-btn active">проектирование</button>
+        </li>
+        <li>
+          <button class="stages__tab-btn">разработка</button>
+        </li>
+        <li>
+          <button class="stages__tab-btn">Поддержка</button>
+        </li>
+      </ul>
+
     </div>
+  </section>
+</main>
 
-
-    <ul class="stages__tab-list">
-      <li>
-        <button class="stages__tab-btn active">проектирование</button>
-      </li>
-      <li>
-        <button class="stages__tab-btn">разработка</button>
-      </li>
-      <li>
-        <button class="stages__tab-btn">Поддержка</button>
-      </li>
-    </ul>
-
-  </div>
-</section>
 
 <footer class="footer">
 
@@ -446,5 +446,6 @@
 <script src="js/file-change.js"></script>
 <script src="js/open-form.js"></script>
 <script src="js/change-phone.js"></script>
+<script src="js/onscroll-slider.js"></script>
 </body>
 </html>
