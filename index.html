@@ -16,30 +16,7 @@
     <symbol id="plus" width="9" height="9" viewBox="0 0 9 9">
       <path d="M8.918 6.014H5.876V8.984H3.104V6.014H0.044V3.386H3.104V0.416H5.876V3.386H8.918V6.014Z"/>
     </symbol>
-    <symbol id="world" width="20" height="20" viewBox="0 0 20 20">
-      <path d="M0 9.41406H4.1557C4.19418 7.94707 4.37355 6.56504 4.67269 5.3125H1.21574C0.554101 6.54746 0.0864844 7.93906 0 9.41406H0Z"/>
-      <path d="M4.1557 10.5859H0C0.0864844 12.0609 0.554101 13.4525 1.21574 14.6875H4.67273C4.37359 13.435 4.19418 12.0529 4.1557 10.5859Z"/>
-      <path d="M9.41407 9.41406V5.3125H5.88435C5.56365 6.55375 5.36943 7.94836 5.32697 9.41406H9.41407Z"/>
-      <path d="M9.41405 4.14062V0C8.13096 0.358359 6.9944 1.99777 6.24432 4.14062H9.41405Z"/>
-      <path d="M9.41405 20V15.8594H6.24432C6.9944 18.0022 8.13096 19.6416 9.41405 20Z"/>
-      <path d="M10.5859 0V4.14062H13.7557C13.0056 1.99777 11.869 0.358359 10.5859 0Z"/>
-      <path d="M14.673 9.41406C14.6305 7.94836 14.4364 6.55375 14.1157 5.3125H10.5859V9.41406H14.673Z"/>
-      <path d="M9.41407 10.5859H5.32697C5.36947 12.0517 5.56365 13.4462 5.88435 14.6875H9.41407V10.5859Z"/>
-      <path d="M15.0004 4.14062H18.0375C16.8247 2.48152 15.1172 1.07988 13.128 0.419647C13.8925 1.32215 14.5319 2.6793 15.0004 4.14062Z"/>
-      <path d="M4.99957 15.8594H1.96246C3.17532 17.5185 4.88278 18.9201 6.872 19.5804C6.1075 18.6779 5.46809 17.3207 4.99957 15.8594Z"/>
-      <path d="M4.99957 4.14062C5.46805 2.6793 6.1075 1.32215 6.87195 0.419647C4.88278 1.07988 3.17531 2.48152 1.96246 4.14062H4.99957Z"/>
-      <path d="M15.0004 15.8594C14.532 17.3207 13.8925 18.6779 13.1281 19.5804C15.1172 18.9201 16.8247 17.5185 18.0376 15.8594H15.0004Z"/>
-      <path d="M10.5859 10.5859V14.6875H14.1157C14.4364 13.4462 14.6306 12.0517 14.673 10.5859H10.5859Z"/>
-      <path d="M15.3273 5.3125C15.6264 6.56504 15.8058 7.94707 15.8443 9.41406H20C19.9135 7.93906 19.4459 6.54746 18.7843 5.3125H15.3273Z"/>
-      <path d="M10.5859 15.8594V20C11.869 19.6416 13.0056 18.0022 13.7557 15.8594H10.5859Z"/>
-      <path d="M20 10.5859H15.8443C15.8058 12.0529 15.6265 13.435 15.3273 14.6875H18.7843C19.4459 13.4525 19.9135 12.0609 20 10.5859Z"/>
-    </symbol>
-    <symbol id="arrow" width="49" height="9" viewBox="0 0 49 9">
-      <path d="M47.91 4.85356C48.1053 4.6583 48.1053 4.34171 47.91 4.14645L44.7281 0.96447C44.5328 0.769208 44.2162
-      0.769208 44.021 0.96447C43.8257 1.15973 43.8257 1.47631 44.021 1.67158L46.8494 4.5L44.021 7.32843C43.8257 7.52369
-      43.8257 7.84028 44.0209 8.03554C44.2162 8.2308 44.5328 8.2308 44.7281 8.03554L47.91 4.85356ZM0.257858 5L47.5565
-      5L47.5565 4L0.257858 4L0.257858 5Z"/>
-    </symbol>
+
     <symbol id="cross" width="25" height="25" viewBox="0 0 25 25">
       <path d="M3.8147e-06 2.94595L2.94595 0L12.5 9.55402L22.0541 0L25 2.94595L15.446 12.5L25 22.0541L22.0541 25L12.5
       15.446L2.94601 25L6.86646e-05 22.0541L9.55402 12.5L3.8147e-06 2.94595Z"/>
@@ -157,130 +134,74 @@
   </svg>
 </div>
 
-<header class="header container">
+<header class="header">
 
-  <div class="header__main-wrap">
-    <div class="header__left-wrap">
-      <a href="index.html">
-        <img src="img/svg/sunrise-logo.svg" alt="Sunrise logo">
-      </a>
+  <div class="header__main-wrap container">
+    <a href="index.html">
+      <img src="img/png/logo.png" alt="Logo">
+    </a>
 
-      <div class="phone-block">
-        <div class="phone-btn-wrap">
-          <button class="phone-region-btn active js-poland-btn">Польша</button>
-          <button class="phone-region-btn js-ukraine-btn">Украина</button>
-        </div>
+    <button class="header__start-btn">
+      <svg class="header__start-btn-plus">
+        <use xlink:href="#plus"></use>
+      </svg>
+      Начать проект
+    </button>
 
-        <a href="tel:+48575932071" class="phone active js-poland-phone">+48 575 93-20-71</a>
-        <a href="tel:+380966058797" class="phone js-ukraine-phone">+38 937 99-92</a>
+    <div class="phone-block">
+      <div class="phone-btn-wrap">
+        <button class="phone-region-btn active js-poland-btn">Польша</button>
+        <button class="phone-region-btn js-ukraine-btn">Украина</button>
       </div>
 
-      <button class="header__start-btn">
-        <svg class="header__start-btn-plus">
-          <use xlink:href="#plus"></use>
-        </svg>
-        Начать проект
-      </button>
+      <a href="tel:+48575932071" class="phone active js-poland-phone">+48 575 93-20-71</a>
+      <a href="tel:+380966058797" class="phone js-ukraine-phone">+38 937 99-92</a>
     </div>
 
-    <div class="header__right-wrap">
+
+    <div class="header__lang-wrap">
       <a href="#" class="lang-btn active-lang">
-        <svg class="lang-btn-icon">
-          <use xlink:href="#world"></use>
-        </svg>
-        Ru
+        RU
       </a>
-      <a href="#" class="lang-btn">
-        <svg class="lang-btn-icon">
-          <use xlink:href="#world"></use>
-        </svg>
-        Pl
+      <a href="#" class="lang-btn polish-lang">
+        PL
       </a>
     </div>
+
   </div>
 
-  <div class="contact-form__wrap">
-    <div class="container">
-      <form action="#" method="POST" class="contact-form">
-        <h2>Контакты</h2>
-        <p class="contact-form__desc">Заполните форму обратной связи и наш содтрудник свяжется с вами.<br/>
-          Также вы можете прикрепить файл с вашим проектом что бы мы поняли ваш проект лучше.</p>
 
-        <div class="contact-form__input-wrap">
-          <input type="text" placeholder="Имя" required class="contact-form__text-input">
-          <input type="email" placeholder="Электронная почта" required class="contact-form__text-input">
-          <input type="tel" placeholder="Номер телефона" required class="contact-form__text-input">
-          <input type="text" placeholder="Название компании" class="contact-form__text-input">
-        </div>
-
-        <div class="contact-form__interactive-wrap">
-          <input id="policy" type="checkbox">
-          <label for="policy" class="contact-form__label">Я согласен на обработку моих персональных данных и ознакомился
-            с
-            политикой обработки персональных данных.
-          </label>
-
-          <div class="contact-form__file-wrap">
-            <input type="file" id="file" name="file">
-            <svg class="contact-form__paperclip">
-              <use xlink:href="#paperclip"></use>
-            </svg>
-
-            <label class="contact-form__file-label" for="file">Прикрепить файл</label>
-          </div>
-        </div>
-
-
-        <button type="submit" class="start-btn">
-          Поехали!
-          <svg class="start-btn-arrow">
-            <use xlink:href="#arrow"></use>
-          </svg>
-        </button>
-      </form>
-
-      <button class="close-btn">
-        <svg>
-          <use xlink:href="#cross"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
 </header>
 <main>
   <section class="greetings">
     <div class="greetings__background-wrap">
-    <div class="greetings__wrap container">
-      <div class="greetings__desc-block">
-        <p class="greetings__text">помогаем развивать бизнес</p>
+      <div class="greetings__wrap container">
+        <div class="greetings__desc-block">
+          <p class="greetings__text">помогаем развивать бизнес</p>
 
-        <h1 class="greetings__title">Цифровые<br/>
-          <span class="greetings__title-accent">идеи и решения</span>
-          <br/> для бизнеса</h1>
+          <h1 class="greetings__title">Цифровые<br/>
+            <span class="greetings__title-accent">идеи и решения</span>
+            <br/> для бизнеса</h1>
 
-        <button class="greetings__start-btn start-btn">
-          Поехали!
+          <button class="greetings__start-btn start-btn">
+            Поехали!
+          </button>
+        </div>
 
-          <svg class="start-btn-arrow">
-            <use xlink:href="#arrow"></use>
-          </svg>
-        </button>
-      </div>
+        <img src="img/png/mockup.png" alt="Devices" class="greetings__devices-img">
 
-      <img src="img/png/mockup.png" alt="Devices" class="greetings__devices-img">
-
-      <ul class="greetings__mouse-icon-wrap">
-        <li>
-          <svg class="greetings__mouse-icon" width="20px" height="35px" viewBox="30.5 -9.5 554 813"
-               xml:space="preserve">
-          <path d="M328,0h-44C271.68,0,42,5.28,42,242v308c0,9.9,3.96,242,242,242h44c13.86,0,242-6.16,242-242V242C570,232.1,566.04,0,328,0z
+        <ul class="greetings__mouse-icon-wrap">
+          <li>
+            <svg class="greetings__mouse-icon" width="20px" height="35px" viewBox="30.5 -9.5 554 813"
+                 xml:space="preserve">
+              <path d="M328,0h-44C271.68,0,42,5.28,42,242v308c0,9.9,3.96,242,242,242h44c13.86,0,242-6.16,242-242V242C570,232.1,566.04,0,328,0z
                M526,550c0,191.62-177.76,198-198,198h-44C92.38,748,86,570.24,86,550V242C86,50.82,263.54,44,284,44h44c191.62,0,198,177.76,198,198V550z"/>
-            <circle cx="306" cy="231" r="45"/>
+              <circle cx="306" cy="231" r="45"/>
         </svg>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
   </section>
 
   <section class="stages">
@@ -441,6 +362,66 @@
     </div>
   </div>
 </footer>
+
+
+<div class="contact-form__wrap">
+  <div class="container">
+    <form action="#" method="POST" class="contact-form">
+      <h2>Контакты</h2>
+      <p class="contact-form__desc">Заполните форму обратной связи и наш содтрудник свяжется с вами.<br>
+        Вы можете <b>прикрепить файл</b> с вашим проектом, а так же <b>указать бюджет</b>, что бы мы поняли вас лучше.</p>
+
+      <div class="contact-form__input-wrap">
+        <div class="contact-form__text-wrap">
+          <label>Имя</label>
+          <input type="text" required class="contact-form__text-input">
+        </div>
+        <div class="contact-form__text-wrap">
+          <label>Номер телефона</label>
+          <input type="email" required class="contact-form__text-input">
+        </div>
+        <div class="contact-form__text-wrap">
+          <label>Электронная почта</label>
+          <input type="tel" required class="contact-form__text-input">
+        </div>
+        <div class="contact-form__textarea-wrap">
+          <label>Дополнительные данные</label>
+          <input type="text" class="contact-form__text-input">
+        </div>
+      </div>
+
+      <div class="contact-form__interactive-wrap">
+        <input id="policy" type="checkbox">
+        <label for="policy" class="contact-form__label">Я согласен(а) на обработку моих персональных данных и
+          ознакомился(ась) с политикой обработки персональных данных.
+        </label>
+
+        <div class="contact-form__file-wrap">
+          <input type="file" id="file" name="file">
+          <svg class="contact-form__paperclip">
+            <use xlink:href="#paperclip"></use>
+          </svg>
+
+          <label class="contact-form__file-label" for="file">Прикрепить файл</label>
+        </div>
+      </div>
+
+
+      <button type="submit" class="start-btn">
+        Поехали!
+        <svg class="start-btn-arrow">
+          <use xlink:href="#arrow"></use>
+        </svg>
+      </button>
+    </form>
+
+    <button class="close-btn">
+      <svg>
+        <use xlink:href="#cross"></use>
+      </svg>
+    </button>
+  </div>
+</div>
 
 <script src="js/onload-animate.js"></script>
 <script src="js/file-change.js"></script>

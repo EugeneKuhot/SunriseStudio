@@ -6,21 +6,34 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  height: calc(100vh - 112px);
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
   overflow-y: scroll;
   width: 100%;
-  padding: 30px 0;
-  background: #f8f8f8;
-  z-index: 5;
+  background: rgba(0, 0, 0, 0.31);
+  z-index: 15;
   transform: translateX(-120%);
   transition: transform .5s ease;
 }
 
 .contact-form__wrap .container {
-  min-height: 100%;
+  min-height: calc(100vh - 110px);
   display: flex;
+  padding: 50px 60px;
   align-items: center;
   position: relative;
+  background: #FFFFFF;
+}
+
+.contact-form__wrap::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: calc(100vh - 110px);
+  min-height: 597px;
+  background: #FFFFFF;
 }
 
 .contact-form {
@@ -29,7 +42,7 @@
 }
 
 .contact-form__desc {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -44,25 +57,34 @@
   justify-content: space-between;
 }
 
+.contact-form__input-wrap input,
+.contact-form__input-wrap textarea {
+  margin-top: 2px;
+}
+
+.contact-form__text-wrap,
+.contact-form__textarea-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-form__text-input {
-  width: 47%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #474747;
+  width: 34.5%;
+  background: #ffffff;
+  border: 1px solid #B6B6B6;
   padding-bottom: 5px;
-  margin-top: 45px;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.03em;
 }
 
 .contact-form__text-input::placeholder {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.03em;
-  color: #474747;
+  color: #707070;
   opacity: 0.7;
 }
 
@@ -71,7 +93,7 @@
   width: 61%;
   padding-left: 30px;
   margin: 35px 0 40px 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -88,8 +110,8 @@
   border: 0;
   background: none;
   position: absolute;
-  right: 50px;
-  top: 0;
+  right: 60px;
+  top: 50px;
   fill: #474747;
   cursor: pointer;
   transition: all .3s ease;
@@ -129,7 +151,7 @@
 .contact-form__file-label {
   display: block;
   max-width: 100%;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

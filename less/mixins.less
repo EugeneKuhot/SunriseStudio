@@ -1,18 +1,17 @@
 .start-btn {
-  min-width: 230px;
+  width: 307px;
+  height: 70px;
   position: relative;
-  padding: 10px 80px 10px 43px;
-  text-align: left;
-  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: center;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: 600;
+  font-size: 25px;
   letter-spacing: 0.15em;
-  color: #FAFAFA;
-  background: linear-gradient(90deg, #0487D9 0%, #049DD9 100%);
-  border-radius: 100px;
-  border: 3px solid transparent;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #FFCA46 0%, #FF9200 100%);
+  border-radius: 0px 50px 50px 50px;
+  border: none;
   transition: all .3s ease;
   cursor: pointer;
 }
@@ -54,13 +53,13 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 30%;
 }
 
 .phone-btn-wrap {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 225px;
   margin-bottom: 8px;
 }
 
@@ -69,7 +68,7 @@
   border: none;
   background: transparent;
   padding: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -86,7 +85,7 @@
 
 .phone {
   display: none;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -108,14 +107,12 @@
 }
 
 .lang-btn {
-  display: none;
-  width: 55px;
-  padding-left: 30px;
+  display: flex;
   padding-right: 0;
   position: relative;
   border: none;
   background: #FFFFFF;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Houschka', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -133,16 +130,18 @@
   transition: all .3s ease;
 }
 
-.lang-btn-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 0;
+.polish-lang {
+  padding-left: 10px;
+  position: relative;
 }
 
-.lang-btn.active-lang {
-  display: flex;
+.polish-lang::before {
+  content: '|';
+  font-family: 'Houschka', Arial, sans-serif;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: -2px;
 }
 
 .language-name {

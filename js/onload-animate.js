@@ -2,7 +2,6 @@
 
 (function () {
 
-  const greetingsDevicesImg = document.querySelector(`.greetings__devices-img`);
   const greetingsText = document.querySelector(`.greetings__text`);
   const greetingsTitle = document.querySelector(`.greetings__title`);
   const greetingsStartBtn = document.querySelector(`.greetings__start-btn`);
@@ -11,9 +10,6 @@
 
   function headerOnloadAnimation() {
     header.classList.add('onload');
-  }
-  function greetingsBackgroundAnimate() {
-    greetingsDevicesImg.classList.add('onload');
   }
   function greetingsTextBlockAnimate() {
     greetingsText.classList.add('onload');
@@ -30,7 +26,6 @@
 
   function onloadAnimation() {
     headerOnloadAnimation();
-    greetingsBackgroundAnimate();
     setTimeout(greetingsTextBlockAnimate, 500);
   }
 
