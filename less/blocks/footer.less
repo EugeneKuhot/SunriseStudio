@@ -2,9 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  min-height: 700px;
+  height: 370px;
+  padding-bottom: 30px;
   background-color: #202020;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .footer__title-block {
@@ -14,33 +21,7 @@
   background-color: #FFFFFF;
 }
 
-.footer .contact-form {
-  min-height: 330px;
-}
-
-.footer .contact-form__text-input {
-  border-bottom: 1px solid #FAFAFA;
-}
-
-.footer .contact-form__text-input::placeholder,
-.footer .contact-form__label,
-.footer .contact-form__file-label {
-  color: #8d8d8d;
-}
-
-.footer .contact-form__paperclip {
-  fill: #8d8d8d;
-}
-
-.footer .contact-form__text-input {
-  color: #FAFAFA;
-}
-
-.footer__copyright-wrap {
-  height: 100px;
-}
-
-.footer__copyright-wrap .container {
+.footer__wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,22 +43,11 @@
   width: auto;
 }
 
-.footer__copyright-wrap .phone {
+.footer__wrap .phone {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 40px;
   color: #FFFFFF;
-}
-
-.footer .lang-btn {
-  width: 120px;
-  background: transparent;
-  color: #FFFFFF;
-}
-
-.footer .lang-btn-icon {
-  fill: #FFFFFF;
-}
-
-.lang-symbol {
-  text-decoration: underline;
 }
 
 .footer .contact-form__label::before {
@@ -86,4 +56,40 @@
 
 #footer-policy:checked + .contact-form__label::before {
   background: url('../img/svg/check-on-footer.svg') no-repeat;
+}
+
+.footer__logo-circle {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.footer__logo:hover .footer__logo-circle,
+.footer__logo:focus .footer__logo-circle {
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.footer__logo-stripes {
+  fill: #505050;
+  transition: all .3s ease;
+}
+
+.footer__logo:hover .footer__logo-stripes,
+.footer__logo:focus .footer__logo-stripes {
+  fill: #FFD335;
+  transition: all .3s ease;
+}
+
+.footer__mail {
+  display: block;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 80px;
+  color: #FF7A00;
+}
+
+.footer__mail:hover,
+.footer__mail:focus {
+  text-decoration: underline;
 }

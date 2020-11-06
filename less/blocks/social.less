@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 18.5%;
   height: 30px;
   margin: 0;
   padding: 0;
@@ -19,16 +18,18 @@
   transition: all .3s ease;
 }
 
-.social-link:hover,
-.social-link:focus {
-  opacity: .6;
-  transition: all .3s ease;
-}
-
 .social-link svg {
   width: 30px;
   height: 30px;
   fill: #FAFAFA;
+  transition: all .3s ease;
+}
+
+.social-link:hover svg,
+.social-link:focus svg {
+  fill: #FF8A00;
+  filter: drop-shadow(0 0 5px #FF8A00);
+  transition: all .3s ease;
 }
 
 .social--vk,
@@ -41,3 +42,4 @@
   height: 100%;
   width: 25%;
 }
+

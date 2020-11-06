@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .header__start-btn {
@@ -28,7 +29,8 @@
   min-width: 212px;
   height: 40px;
   padding: 5px 20px 5px 35px;
-  border: none;
+  border-top: 0 solid #FF8A00;
+  border-bottom: 0 solid #FF8A00;
   border-left: 4px solid #FF8A00;
   border-right: 4px solid #FF8A00;
   background: #FFFFFF;
@@ -39,8 +41,45 @@
   line-height: 22px;
   letter-spacing: 0.05em;
   color: #FF8A00;
-  transition: all .3s ease;
+  transition: all .1s ease;
   cursor: pointer;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header__logo svg {
+  height: 85px;
+}
+
+.header__logo-stripes {
+  fill: #505050;
+  transition: all .3s ease;
+}
+
+.header__logo-shining {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.header__logo:hover .header__logo-shining,
+.header__logo:focus .header__logo-shining {
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.header__logo:active .header__logo-shining {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.header__logo:hover .header__logo-stripes,
+.header__logo:focus .header__logo-stripes {
+  fill: #FFD335;
+  transition: all .3s ease;
 }
 
 .header__start-btn-plus {
@@ -56,15 +95,8 @@
 
 .header__start-btn:hover,
 .header__start-btn:focus {
-  color: #474747;
-  border-left: 4px solid #474747;
-  border-right: 4px solid #474747;
-  transition: all .3s ease;
-}
-
-.header__start-btn:hover .header__start-btn-plus,
-.header__start-btn:focus .header__start-btn-plus {
-  fill: #474747;
+  border-top: 4px solid #FF8A00;
+  border-bottom: 4px solid #FF8A00;
   transition: all .3s ease;
 }
 
