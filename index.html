@@ -294,6 +294,12 @@
 </header>
 <main>
   <section class="greetings">
+    <div class="circle xxlarge shade1"></div>
+    <div class="circle xlarge shade2"></div>
+    <div class="circle large shade3"></div>
+    <div class="circle mediun shade4"></div>
+    <div class="circle small shade5"></div>
+
     <div class="greetings__background-wrap">
       <div class="greetings__wrap container">
         <div class="greetings__desc-block">
@@ -329,7 +335,7 @@
       <h2 class="about-us__title">О нас</h2>
 
       <div class="about-us__desc-wrap">
-        <p class="about-us__desc bounce-in-left">
+        <p class="about-us__desc">
           <span>
             <b>Основные направления</b> — автоматизация дизайна, графический дизайн, создание сайтов, городской дизайн,
             архитектура, дизайн среды, системы навигации, промышленный дизайн, проектирование интерфейсов, создание
@@ -343,7 +349,7 @@
           </span>
         </p>
 
-        <p class="about-us__cite bounce-in-right">
+        <p class="about-us__cite">
           <svg class="about-us__quotes">
             <use xlink:href="#quotes"></use>
           </svg>
@@ -357,17 +363,40 @@
     </div>
   </section>
 
-  <section class="services bounce-top">
+  <section class="workers">
+    <div class="container">
+      <h2 class="workers__title">Комплексный подход</h2>
+      <p class="workers__desc">
+        Помогаем чётко определить бизнес-цели и<br>
+        следовать верному пути для их достижения.
+      </p>
+      <ul class="workers__tabs">
+        <li class="workers__tabs-item">
+          <button class="active">Проектирование</button>
+        </li>
+        <li class="workers__tabs-item">
+          <button>Разработка</button>
+        </li>
+        <li class="workers__tabs-item">
+          <button>Поддержка</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="services">
     <div class="container">
       <ul class="services__tabs">
         <li class="services__tabs-item">
           <button class="active">Создание сайтов</button>
         </li>
         <li class="services__tabs-item">
-          <button>Web-marketing</button></li>
+          <button>Web-marketing</button>
+        </li>
         </li>
         <li class="services__tabs-item">
-          <button>Design</button></li>
+          <button>Design</button>
+        </li>
         </li>
         <li class="services__tabs-item">
           <button>Аудит сайтов и копирайтинг</button>
@@ -415,7 +444,8 @@
             <button>Реклама Google</button>
           </li>
           <li class="services__service-item">
-            <button>Реклама в соцсетях, мессенджерах</li>
+            <button>Реклама в соцсетях, мессенджерах</button>
+          </li>
           <li class="services__service-item">
             <button>Накрутка “живых” подписчиков</button>
           </li>
@@ -795,5 +825,6 @@
 <script src="js/open-form.js"></script>
 <script src="js/change-phone.js"></script>
 <script src="js/index-tabs.js"></script>
+<script src="js/animation.js"></script>
 </body>
 </html>

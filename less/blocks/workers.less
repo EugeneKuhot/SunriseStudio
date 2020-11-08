@@ -1,0 +1,48 @@
+.workers {
+  min-height: 860px;
+  background: #1E1E1E;
+}
+
+.workers__title,
+.workers__desc {
+  color: #FFFFFF;
+}
+
+.workers__tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 610px;
+}
+
+.workers__tabs-item button {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  color: #9A9A9A;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.workers__tabs-item button:hover {
+  color: #ff8a00;
+  transition: all .3s ease;
+}
+
+
+.workers__tabs-item button.active {
+  color: #FFFFFF;
+  position: relative;
+}
+
+.workers__tabs-item button.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  bottom: -12px;
+  background: #ff8a00;
+}
