@@ -1,6 +1,16 @@
 .workers {
+  position: relative;
   min-height: 860px;
   background: #1E1E1E;
+}
+
+.workers .container {
+  z-index: 2;
+  position: relative;
+}
+
+.workers-bg-wrap {
+  position: relative;
 }
 
 .workers__title,
@@ -80,11 +90,6 @@
   position: relative;
 }
 
-
-
-
-
-
 .add-worker {
   -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
   animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
@@ -158,6 +163,94 @@
     transform: rotateX(-100deg);
     -webkit-transform-origin: top;
     transform-origin: top;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cube {
+  position: absolute;
+  top: 65%;
+  left: 75%;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #FFAA00;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 10s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #FFAA00;
+}
+.cube:nth-child(2) {
+  animation-delay: 1s;
+  left: 25%;
+  top: 40%;
+}
+.cube:nth-child(3) {
+  animation-delay: 2s;
+  left: 82%;
+  top: 50%;
+}
+.cube:nth-child(4) {
+  animation-delay: 3s;
+  left: 90%;
+  top: 10%;
+}
+.cube:nth-child(5) {
+  animation-delay: 4s;
+  left: 80%;
+  top: 85%;
+}
+.cube:nth-child(6) {
+  animation-delay: 5s;
+  left: 10%;
+  top: 10%;
+}
+.cube:nth-child(7) {
+  animation-delay: 7s;
+  left: 65%;
+  top: 40%;
+}
+.cube:nth-child(8) {
+  animation-delay: 7s;
+  left: 40%;
+  top: 95%;
+}
+.cube:nth-child(9) {
+  animation-delay: 7s;
+  left: 50%;
+  top: 10%;
+}
+.cube:nth-child(10) {
+  animation-delay: 7s;
+  left: 50%;
+  top: 10%;
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
     opacity: 0;
   }
 }

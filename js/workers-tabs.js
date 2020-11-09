@@ -5,7 +5,7 @@
   let tabsBlock = document.querySelector('.workers');
   let tabItems = tabsBlock.querySelectorAll('.workers__tabs-item button');
 
-  function getActiveTabItem (item) {
+  function getActiveTabItem(item) {
     tabItems.forEach(el => el.classList.remove('active'));
     item.classList.add('active');
   }
@@ -15,7 +15,7 @@
   const supportBlock = document.querySelector('.js-support-wrap');
   const wraps = [projectBlock, developingBlock, supportBlock];
 
-  function getWorker () {
+  function getWorker() {
     tabItems.forEach(el => el.setAttribute('disabled', 'true'));
     window.removeEventListener('scroll', window.animation.scrollAnimation);
 
@@ -31,11 +31,9 @@
           }
         });
 
-        setTimeout(function() {
-          wraps[i].classList.add('add-worker');
-          tabItems.forEach(el => el.removeAttribute('disabled', 'true'));
-          window.addEventListener('scroll', window.animation.scrollAnimation);
-        }, 600)
+        wraps[i].classList.add('add-worker');
+        tabItems.forEach(el => el.removeAttribute('disabled', 'true'));
+        window.addEventListener('scroll', window.animation.scrollAnimation);
       }
     }
   }
