@@ -3,10 +3,18 @@
 (function () {
 
   const greetingsBlock = document.querySelector('.greetings');
+
   const aboutUsBlock = document.querySelector('.about-us');
   const aboutUsDesc = document.querySelector('.about-us__desc');
   const aboutUsCite = document.querySelector('.about-us__cite');
+
   const workersBlock = document.querySelector('.workers');
+
+  const projectBlock = document.querySelector('.js-project-wrap');
+  const developingBlock = document.querySelector('.js-developing-wrap');
+  const supportBlock = document.querySelector('.js-support-wrap');
+  const wraps = [projectBlock, developingBlock, supportBlock];
+
   const servicesBlock = document.querySelector('.services');
 
   const greetingsBlockHeight = greetingsBlock.clientHeight;
@@ -25,6 +33,18 @@
     }
   }
 
+  function workersAnimation() {
+    let scrolled = window.pageYOffset;
+    let coords = greetingsBlockHeight + aboutUsBlockHeight - ((greetingsBlockHeight + aboutUsBlockHeight) / 5);
+
+    if (scrolled >= coords) {
+      let isWorkerAdded = wraps.some(el => el.classList.contains('add-worker'));
+      if (!isWorkerAdded) {
+        projectBlock.classList.add('add-worker');
+      }
+    }
+  }
+
   function serviceAnimation() {
     let scrolled = window.pageYOffset;
     let coords = greetingsBlockHeight + aboutUsBlockHeight + workersBlockHeight - ((greetingsBlockHeight + aboutUsBlockHeight + workersBlockHeight) / 2.5);
@@ -34,15 +54,25 @@
     }
   }
 
-  window.addEventListener('scroll', function () {
+
+
+  function scrollAnimation (){
     aboutUsAnimation();
+    workersAnimation();
     serviceAnimation();
-  });
+  }
+
+  window.addEventListener('scroll', scrollAnimation);
 
   window.addEventListener('load', function () {
     aboutUsAnimation();
+    workersAnimation();
     serviceAnimation();
   });
 
+
+  window.animation = {
+    scrollAnimation
+  };
 
 })();

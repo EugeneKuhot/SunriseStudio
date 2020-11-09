@@ -21,31 +21,32 @@
 }
 
 .greetings__desc-block {
-  padding: 35px 0 0;
   max-width: 510px;
   position: relative;
 }
 
-.greetings__desc-block::before {
+.greetings__text::before {
   content: '';
   display: block;
-  width: 67px;
+  width: 100%;
   height: 5px;
   position: absolute;
   left: 0;
-  top: 100px;
+  bottom: 0;
   background: #FF961B;
   opacity: 0;
   transition: all .3s ease;
 }
 
-.greetings__desc-block.onload::before {
-  top: 0;
+.greetings__text.onload::before {
+  bottom: -15px;
   opacity: 1;
   transition: all .3s ease;
 }
 
 .greetings__text {
+  position: relative;
+  width: max-content;
   margin: 0;
   font-style: normal;
   font-weight: 500;
@@ -106,50 +107,9 @@
   width: 50%;
 }
 
-.greetings__mouse-icon-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  padding: 0;
-  position: absolute;
-  left: 50%;
-  bottom: 15px;
-  transform: translateX(-50%);
-  list-style: none;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-}
-
-.greetings__mouse-icon {
-  fill: #000;
-}
-
-.greetings__mouse-icon circle {
-  animation: scroll 1.5s ease infinite;
-}
-
 .greetings__pic-wrap {
   position: relative;
 }
-
-@keyframes scroll {
-  0% {
-    opacity: 0;
-    cy: 231;
-  }
-  33% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    cy: 431;
-  }
-}
-
-
-
 
 .area {
   width: 65%;
