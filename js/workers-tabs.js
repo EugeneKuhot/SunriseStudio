@@ -2,8 +2,8 @@
 
 (function () {
 
-  let tabsBlock = document.querySelector('.workers');
-  let tabItems = tabsBlock.querySelectorAll('.workers__tabs-item button');
+  const tabsBlock = document.querySelector('.workers');
+  const tabItems = tabsBlock.querySelectorAll('.workers__tabs-item button');
 
   function getActiveTabItem(item) {
     tabItems.forEach(el => el.classList.remove('active'));
@@ -38,10 +38,31 @@
     }
   }
 
-
   tabItems.forEach(el => el.addEventListener('click', function () {
     getActiveTabItem(el);
     getWorker();
   }));
+
+  const webDesignBtn = tabsBlock.querySelector('.js-webdesigner-btn');
+  const graphDesignBtn = tabsBlock.querySelector('.js-graphdesigner-btn');
+  const webDesignWrap = tabsBlock.querySelector('.js-webdesign');
+  const graphDesignWrap = tabsBlock.querySelector('.js-graphdesign');
+
+  function getDesigner(wrap, btn) {
+    webDesignWrap.classList.add('hidden');
+    graphDesignWrap.classList.add('hidden');
+    webDesignBtn.classList.remove('active');
+    graphDesignBtn.classList.remove('active');
+
+    wrap.classList.remove('hidden');
+    btn.classList.add('active');
+  }
+
+  webDesignBtn.addEventListener('click', function () {
+    getDesigner(webDesignWrap, webDesignBtn);
+  });
+  graphDesignBtn.addEventListener('click', function () {
+    getDesigner(graphDesignWrap, graphDesignBtn);
+  });
 
 })();

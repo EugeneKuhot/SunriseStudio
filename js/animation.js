@@ -50,11 +50,9 @@
     let coords = greetingsBlockHeight + aboutUsBlockHeight + workersBlockHeight - ((greetingsBlockHeight + aboutUsBlockHeight + workersBlockHeight) / 2.5);
 
     if (scrolled >= coords) {
-      servicesBlock.classList.add('bounce-top');
+      servicesBlock.classList.add('slide-in-blurred-left');
     }
   }
-
-
 
   function scrollAnimation (){
     aboutUsAnimation();

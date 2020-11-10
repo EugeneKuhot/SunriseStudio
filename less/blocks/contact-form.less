@@ -24,16 +24,6 @@
   padding: 50px 60px;
   position: relative;
   background: #FFFFFF;
-  overflow-y: scroll;
-}
-
-.contact-form__wrap::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 50%;
-  height: calc(100vh - 80px);
-  background: #FFFFFF;
 }
 
 .contact-form {
@@ -203,17 +193,7 @@
   transform: translateY(-50%);
 }
 
-.contact-form__submit {
-  color: #FF8A00;
+.contact-form__bg {
+  width: 100%;
   background: #FFFFFF;
-  border: 4px solid #FF8A00;
-  transition: all .3s ease;
 }
-
-.contact-form__submit:hover,
-.contact-form__submit:focus {
-  background: linear-gradient(180deg, #FFA829 0%, #FF6D01 100%);
-  color: #FFFFFF;
-  transition: all .3s ease;
-}
-

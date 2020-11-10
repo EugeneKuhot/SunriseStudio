@@ -4,13 +4,30 @@
   background: #1E1E1E;
 }
 
+.workers::before {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 8px;
+  position: absolute;
+  right: 0;
+  top: 206px;
+  background: #FFFFFF;
+}
+
 .workers .container {
-  z-index: 2;
   position: relative;
 }
 
-.workers-bg-wrap {
-  position: relative;
+.workers .container::after {
+  content: '';
+  display: block;
+  width: 45%;
+  height: 8px;
+  position: absolute;
+  top: 206px;
+  right: 0;
+  background: #FFFFFF;
 }
 
 .workers__title,
@@ -21,9 +38,11 @@
 .workers__tabs {
   display: flex;
   justify-content: space-between;
-  width: 610px;
+  position: relative;
+  width: 50%;
   margin-top: 95px;
 }
+
 
 .workers__tabs-item button {
   background: transparent;
@@ -42,6 +61,29 @@
   transition: all .3s ease;
 }
 
+.design__slider-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px;
+  height: 25px;
+  margin-top: 15px;
+}
+
+.design__slider-btns button {
+  width: 11px;
+  height: 11px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.design__slider-btns button.active {
+  width: 14px;
+  height: 14px;
+  background: #FF8A00;
+}
 
 .workers__tabs-item button.active {
   color: #FFFFFF;
@@ -67,9 +109,19 @@
   position: absolute;
 }
 
+.workers__designer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .workers__item-photo {
   width: 330px;
   height: 400px;
+}
+
+.workers__name-wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
 .workers__item-desc {
@@ -84,17 +136,30 @@
 .workers__name,
 .workers__profession {
   margin: 0;
+  text-align: left;
+}
+
+.workers__name {
+  font-size: 30px;
+  line-height: 25px;
+}
+
+.workers__profession {
+  width: 70%;
 }
 
 .workers__wrap {
   position: relative;
 }
 
+.js-project-wrap {
+  flex-direction: column;
+}
+
 .add-worker {
   -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
   animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
-
 @-webkit-keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
@@ -127,13 +192,10 @@
     opacity: 1;
   }
 }
-
-
 .remove-worker {
   -webkit-animation: swing-out-top-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
   animation: swing-out-top-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
 }
-
 @-webkit-keyframes swing-out-top-bck {
   0% {
     -webkit-transform: rotateX(0deg);
@@ -168,89 +230,33 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-.hero {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: 1;
+.slide-in-left {
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.cube {
-  position: absolute;
-  top: 65%;
-  left: 75%;
-  width: 10px;
-  height: 10px;
-  border: solid 1px #FFAA00;
-  transform-origin: top left;
-  transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  animation: cube 10s ease-in forwards infinite;
-}
-.cube:nth-child(2n) {
-  border-color: #FFAA00;
-}
-.cube:nth-child(2) {
-  animation-delay: 1s;
-  left: 25%;
-  top: 40%;
-}
-.cube:nth-child(3) {
-  animation-delay: 2s;
-  left: 82%;
-  top: 50%;
-}
-.cube:nth-child(4) {
-  animation-delay: 3s;
-  left: 90%;
-  top: 10%;
-}
-.cube:nth-child(5) {
-  animation-delay: 4s;
-  left: 80%;
-  top: 85%;
-}
-.cube:nth-child(6) {
-  animation-delay: 5s;
-  left: 10%;
-  top: 10%;
-}
-.cube:nth-child(7) {
-  animation-delay: 7s;
-  left: 65%;
-  top: 40%;
-}
-.cube:nth-child(8) {
-  animation-delay: 7s;
-  left: 40%;
-  top: 95%;
-}
-.cube:nth-child(9) {
-  animation-delay: 7s;
-  left: 50%;
-  top: 10%;
-}
-.cube:nth-child(10) {
-  animation-delay: 7s;
-  left: 50%;
-  top: 10%;
-}
-@keyframes cube {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
