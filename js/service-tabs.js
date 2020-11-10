@@ -16,13 +16,13 @@
     item.classList.add('active');
   }
 
-  function getActiveAdsList () {
+  function getActiveServiceList () {
     for (let i = 0; i < wraps.length; i++) {
       if (tabItems[i].classList.contains('active')) {
         wraps.forEach(el => el.classList.remove('active'));
-        wraps.forEach(el => el.classList.add('hidden'));
+        wraps.forEach(el => el.classList.remove('add-worker'));
         wraps[i].classList.add('active');
-        wraps[i].classList.remove('hidden');
+        wraps[i].classList.add('add-worker');
         wraps[i].querySelectorAll('button').forEach(el => el.classList.remove('active'));
         wraps[i].querySelector('button').classList.add('active');
       }
@@ -31,20 +31,30 @@
 
   tabItems.forEach(el => el.addEventListener('click', function () {
     getActiveTabItem(el);
-    getActiveAdsList();
+    getActiveServiceList();
   }));
 
 
   let allServiceBtns = tabsBlock.querySelectorAll('.services__service-list button');
-
 
   function getActiveServiceBtn (item) {
     allServiceBtns.forEach(el => el.classList.remove('active'));
     item.classList.add('active');
   }
 
+  function getServiceDescription(el) {
+
+    let allDescriptions = el.parentElement.parentElement.parentElement.querySelectorAll('.services__tab-desc');
+    allDescriptions.forEach(desc => desc.classList.add('hidden'));
+    let descWrapClass = el.classList + '-block';
+    let descWrap = tabsBlock.querySelector(`.${descWrapClass}`);
+    descWrap.classList.remove('hidden');
+  }
+
   allServiceBtns.forEach(el => el.addEventListener('click', function () {
+    getServiceDescription(el);
     getActiveServiceBtn(el);
+
   }))
 
 })();

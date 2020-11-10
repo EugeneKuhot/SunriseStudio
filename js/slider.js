@@ -1,8 +1,8 @@
 'use strict';
 (function () {
-  let multiItemSlider = (function () {
+  var multiItemSlider = (function () {
     return function (selector, config) {
-      let
+      var
         _mainElement = document.querySelector(selector), // основный элемент блока
         _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
         _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
@@ -20,12 +20,12 @@
         _items.push({item: item, position: index, transform: 0});
       });
 
-      let position = {
+      var position = {
         getMin: 0,
         getMax: _items.length - 1,
       }
 
-      let _transformItem = function (direction) {
+      var _transformItem = function (direction) {
         if (direction === 'right') {
           if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
             return;
@@ -56,15 +56,15 @@
       }
 
       // обработчик события click для кнопок "назад" и "вперед"
-      let _controlClick = function (e) {
+      var _controlClick = function (e) {
         if (e.target.classList.contains('slider__control')) {
           e.preventDefault();
-          let direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+          var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
           _transformItem(direction);
         }
       };
 
-      let _setUpListeners = function () {
+      var _setUpListeners = function () {
         // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
         _sliderControls.forEach(function (item) {
           item.addEventListener('click', _controlClick);
@@ -86,5 +86,6 @@
     }
   }());
 
-  let slider = multiItemSlider('.slider')
+  var slider = multiItemSlider('.slider')
+
 })();

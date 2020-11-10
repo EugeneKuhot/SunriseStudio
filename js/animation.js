@@ -50,7 +50,7 @@
     let coords = greetingsBlockHeight + aboutUsBlockHeight + workersBlockHeight - ((greetingsBlockHeight + aboutUsBlockHeight + workersBlockHeight) / 2.5);
 
     if (scrolled >= coords) {
-      servicesBlock.classList.add('slide-in-blurred-left');
+      servicesBlock.classList.add('scale-in-center');
     }
   }
 
