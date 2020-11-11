@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 200px;
+  height: 250px;
   padding-bottom: 30px;
   background-color: #202020;
 }
@@ -35,7 +35,7 @@
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer .phone-block {
@@ -44,9 +44,16 @@
 
 .footer__wrap .phone {
   font-weight: 600;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 30px;
   color: #FFFFFF;
+  transition: all .3s ease;
+}
+
+.footer__wrap .phone:hover,
+.footer__wrap .phone:focus {
+  color: #FF7A00;
+  transition: all .3s ease;
 }
 
 .footer .contact-form__label::before {
@@ -81,9 +88,9 @@
 
 .footer__mail {
   display: block;
-  margin: 0 0 20px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 30px;
   color: #FF7A00;
 }
 

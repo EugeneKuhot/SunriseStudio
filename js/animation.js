@@ -27,6 +27,4 @@
 
   allBlocksForAnimation.forEach(block => observer.observe(block));
 
-
-
 })();

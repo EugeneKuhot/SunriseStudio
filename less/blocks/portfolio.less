@@ -1,10 +1,16 @@
 .portfolio {
-  min-height: 760px;
+  min-height: 700px;
   background: #1E1E1E;
 }
 
 .portfolio .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
   padding-top: 80px;
+  padding-bottom: 80px;
+
 }
 
 .portfolio__title {
@@ -28,6 +34,12 @@
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
   color: #FFFFFF;
+  opacity: 0;
+}
+
+.slider__item img {
+  margin: auto;
+  display: block;
 }
 
 .slider__control {
@@ -80,6 +92,7 @@
   background: url("../img/svg/slider-arrow.svg");
   transform: rotate(180deg);
 }
+
 .slider__control_right::before {
   background: url("../img/svg/slider-arrow.svg");
 }
@@ -96,6 +109,7 @@
 }
 
 .animated .slider__item {
+  opacity: 1;
   -webkit-animation: slit-in-vertical 0.45s ease-out both;
   animation: slit-in-vertical 0.45s ease-out both;
 }
@@ -116,6 +130,7 @@
     transform: translateZ(0) rotateY(0);
   }
 }
+
 @keyframes slit-in-vertical {
   0% {
     -webkit-transform: translateZ(-800px) rotateY(90deg);
