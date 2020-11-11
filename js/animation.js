@@ -6,8 +6,9 @@
   const workersBlock = document.querySelector('.workers');
   const servicesBlock = document.querySelector('.services');
   const portfolioBlock = document.querySelector('.portfolio');
+  const contactBlock = document.querySelector('.contact');
 
-  const allBlocksForAnimation = [aboutUsBlock, workersBlock, servicesBlock, portfolioBlock];
+  const allBlocksForAnimation = [aboutUsBlock, workersBlock, servicesBlock, portfolioBlock, contactBlock];
 
   let options = {
     threshold: .4
