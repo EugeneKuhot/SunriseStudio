@@ -20,9 +20,9 @@
     for (let i = 0; i < wraps.length; i++) {
       if (tabItems[i].classList.contains('active')) {
         wraps.forEach(el => el.classList.remove('active'));
-        wraps.forEach(el => el.classList.remove('add-worker'));
+        wraps.forEach(el => el.classList.remove('slide-in-blurred-bottom'));
         wraps[i].classList.add('active');
-        wraps[i].classList.add('add-worker');
+        wraps[i].classList.add('slide-in-blurred-bottom');
         wraps[i].querySelectorAll('button').forEach(el => el.classList.remove('active'));
         wraps[i].querySelector('button').classList.add('active');
       }
@@ -43,12 +43,15 @@
   }
 
   function getServiceDescription(el) {
-
-    let allDescriptions = el.parentElement.parentElement.parentElement.querySelectorAll('.services__tab-desc');
-    allDescriptions.forEach(desc => desc.classList.add('hidden'));
-    let descWrapClass = el.classList + '-block';
-    let descWrap = tabsBlock.querySelector(`.${descWrapClass}`);
-    descWrap.classList.remove('hidden');
+    if (!el.classList.contains('active')) {
+      let allDescriptions = el.parentElement.parentElement.parentElement.querySelectorAll('.services__tab-desc');
+      allDescriptions.forEach(desc => desc.classList.add('hidden'));
+      allDescriptions.forEach(desc => desc.classList.remove('slide-in-blurred-bottom'));
+      let descWrapClass = el.classList + '-block';
+      let descWrap = tabsBlock.querySelector(`.${descWrapClass}`);
+      descWrap.classList.remove('hidden');
+      descWrap.classList.add('slide-in-blurred-bottom');
+    }
   }
 
   allServiceBtns.forEach(el => el.addEventListener('click', function () {

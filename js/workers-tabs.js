@@ -17,7 +17,6 @@
 
   function getWorker() {
     tabItems.forEach(el => el.setAttribute('disabled', 'true'));
-    window.removeEventListener('scroll', window.animation.scrollAnimation);
 
     for (let i = 0; i < wraps.length; i++) {
       if (tabItems[i].classList.contains('active')) {
@@ -33,7 +32,6 @@
 
         wraps[i].classList.add('add-worker');
         tabItems.forEach(el => el.removeAttribute('disabled', 'true'));
-        window.addEventListener('scroll', window.animation.scrollAnimation);
       }
     }
   }

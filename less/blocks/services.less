@@ -50,12 +50,6 @@
   width: 53%;
 }
 
-.services__service-item button:hover,
-.services__service-item button:focus {
-  opacity: .6;
-  transition: opacity .3s ease;
-}
-
 .services__service-item button {
   height: 50px;
   border: none;
@@ -66,12 +60,18 @@
   color: #1E1E1E;
   padding-left: 80px;
   cursor: pointer;
-  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.services__service-item button:hover,
+.services__service-item button:focus {
+  color: #9A9A9A;
   transition: opacity .3s ease;
 }
 
 .services__service-item button.active {
   font-weight: 800;
+  font-size: 25px;
   line-height: 30px;
   text-align: left;
   color: #1E1E1E;
@@ -89,42 +89,54 @@
 
 .services__tab-desc {
   width: 45%;
-}
-
-.services__tab-desc {
   font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 25px;
   color: #1E1E1E;
 }
 
-.scale-in-center {
-  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.animated .slide-in-blurred-bottom {
+  -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-@-webkit-keyframes scale-in-center {
+@-webkit-keyframes slide-in-blurred-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
-@keyframes scale-in-center {
+@keyframes slide-in-blurred-bottom {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
-
