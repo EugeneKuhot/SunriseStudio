@@ -19,6 +19,7 @@
   formCloseBtn.addEventListener(`click`, removeFormPopup);
 
   window.openForm = {
-    getFormPopup
+    getFormPopup,
+    formWrap
   }
 })();
