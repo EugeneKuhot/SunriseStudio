@@ -1,8 +1,8 @@
 'use strict';
 (function () {
-  var multiItemSlider = (function () {
+  let multiItemSlider = (function () {
     return function (selector, config) {
-      var
+      let
         _mainElement = document.querySelector(selector), // основный элемент блока
         _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
         _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
@@ -20,12 +20,12 @@
         _items.push({item: item, position: index, transform: 0});
       });
 
-      var position = {
+      let position = {
         getMin: 0,
         getMax: _items.length - 1,
       }
 
-      var _transformItem = function (direction) {
+      let _transformItem = function (direction) {
         if (direction === 'right') {
           if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
             return;
@@ -56,15 +56,15 @@
       }
 
       // обработчик события click для кнопок "назад" и "вперед"
-      var _controlClick = function (e) {
+      let _controlClick = function (e) {
         if (e.target.classList.contains('slider__control')) {
           e.preventDefault();
-          var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+          let direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
           _transformItem(direction);
         }
       };
 
-      var _setUpListeners = function () {
+      let _setUpListeners = function () {
         // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
         _sliderControls.forEach(function (item) {
           item.addEventListener('click', _controlClick);
@@ -86,6 +86,29 @@
     }
   }());
 
-  var slider = multiItemSlider('.slider')
+  let slider = multiItemSlider('.slider')
+  let slider1 = multiItemSlider('.portfolio__popup')
+
+  const portfolioPopup = document.querySelector('.portfolio__popup');
+  const portfolioPopupCloseBtn = portfolioPopup.querySelector('.close-btn');
+  const portfolioItems = document.querySelectorAll('.main-slider .slider__item');
+  const portfolioOrderBtns = portfolioPopup.querySelectorAll('.portfolio__popup-order-btn');
+
+  function getPortfolioPopup() {
+    portfolioPopup.classList.remove('removePortfolioPopup');
+    portfolioPopup.classList.add('getPortfolioPopup');
+  }
+  function removePortfolioPopup() {
+    portfolioPopup.classList.remove('getPortfolioPopup');
+    portfolioPopup.classList.add('removePortfolioPopup');
+  }
+
+  portfolioPopupCloseBtn.addEventListener('click', removePortfolioPopup);
+  portfolioItems.forEach(el => el.addEventListener('click', getPortfolioPopup));
+  portfolioOrderBtns.forEach(el => el.addEventListener('click', window.openForm.getFormPopup));
+
+  window.slider = {
+    portfolioPopup
+  }
 
 })();
