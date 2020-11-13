@@ -71,6 +71,9 @@
   resize: none;
   border: 1px solid #B6B6B6;
   padding: 10px;
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .contact-form__textarea-wrap {
@@ -83,23 +86,23 @@
   grid-column-start: 1;
 }
 
+.contact-form__text-input.invalid {
+  background: url("../img/svg/invalid.svg") no-repeat 98%;
+}
+
+.contact-form__text-input.valid {
+  background: url("../img/svg/valid.svg") no-repeat 98%;
+}
+
 .contact-form__text-input {
   width: 90%;
-  background: #ffffff;
+  background: none;
   border: 1px solid #B6B6B6;
   padding: 10px 35px 10px 10px;
   letter-spacing: 0.03em;
   font-weight: 500;
   font-size: 20px;
   line-height: 25px;
-}
-
-.contact-form__text-input:valid {
-  background: url("../img/svg/valid.svg") no-repeat 98%;
-}
-
-.contact-form__text-input:invalid {
-  background: url("../img/svg/invalid.svg") no-repeat 98%;
 }
 
 .contact-form__text-input::placeholder {
