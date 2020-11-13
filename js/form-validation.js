@@ -1,67 +1,46 @@
 'use strict';
 
 (function () {
-  const modalForm = window.openForm.formWrap;
+  const modalForm = window.openForm.formWrap.querySelector('.contact-form');
+  const modalFormCheck = modalForm.querySelector('#modal-contact-policy');
+  const modalUserName = modalForm.querySelector('#modal-name');
+  const modalEmail = modalForm.querySelector('#modal-email');
+  const modalPhone = modalForm.querySelector('#modal-phone');
+
   const contactForm = document.querySelector('.contact-form');
-  /*const modalFormCheck = modalForm.querySelector('#policy');
   const contactFormCheck = contactForm.querySelector('#contact-policy');
-  const modalFormSubmit = modalForm.querySelector('button');
-  const contactFormSubmit = contactForm.querySelector('button');
+  const username = contactForm.querySelector('#name');
+  const email = contactForm.querySelector('#email');
+  const phone = contactForm.querySelector('#phone');
 
-  function isPolicyChecked(form, checkbox, evt) {
-    evt.preventDefault();
-
-    if (checkbox.checked) {
-      form.submit();
-    }
-  }
-
-  modalFormSubmit.addEventListener('click', function (evt) {
-    isPolicyChecked(modalForm, modalFormCheck, evt);
-  })
-
-  contactFormSubmit.addEventListener('click', function (evt) {
-    isPolicyChecked(contactForm, contactFormCheck, evt);
-  })*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-  const username = document.getElementById('name');
-  const email = document.getElementById('email');
-  const phone = document.getElementById('phone');
-  const contactFormSubmit = contactForm.querySelector('button');
-
-
-  username.addEventListener('input', function () {
+  username.addEventListener('change', function () {
     showSuccess(username);
   });
-
-
-  email.addEventListener('input', function () {
+  email.addEventListener('change', function () {
     checkEmail(email);
   });
+  phone.addEventListener('change', function () {
+    showSuccess(phone);
+  });
 
+  modalUserName.addEventListener('change', function () {
+    showSuccess(modalUserName);
+  });
+  modalEmail.addEventListener('change', function () {
+    checkEmail(modalEmail);
+  });
+  modalPhone.addEventListener('change', function () {
+    checkEmail(modalPhone);
+  });
 
   function showError(input) {
     input.classList.add('invalid');
     input.classList.remove('valid');
   }
-
   function showSuccess(input) {
     input.classList.add('valid');
     input.classList.remove('invalid');
   }
-
   function checkEmail(input) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(re.test(input.value.trim())) {
@@ -70,8 +49,6 @@
       showError(input);
     }
   }
-
-//checkRequired fields
   function checkRequired(inputArr) {
     inputArr.forEach(function(input){
       if(input.value.trim() === ''){
@@ -82,15 +59,39 @@
     });
   }
 
+  function checkValidityForm([username, email, phone]) {
+    return [username, email, phone].every( el => el.classList.contains('valid'));
+  }
 
-//Event Listeners
   contactForm.addEventListener('submit',function(e) {
     e.preventDefault();
     checkRequired([username, email, phone]);
     checkEmail(email);
 
-    if ([username, email, phone].classList.contains('valid')) {
-      contactForm.submit();
+    if (contactFormCheck.checked) {
+      if (checkValidityForm([username, email, phone])) {
+        contactForm.submit();
+      }
+    } else {
+      let checkLabel = contactForm.querySelector('.contact-form__label');
+      checkLabel.classList.add('invalid');
     }
+
+  });
+
+  modalForm.addEventListener('submit',function(e) {
+    e.preventDefault();
+    checkRequired([modalUserName, modalEmail, modalPhone]);
+    checkEmail(modalEmail);
+
+    if (modalFormCheck.checked) {
+      if (checkValidityForm([modalUserName, modalEmail, modalPhone])) {
+        modalForm.submit();
+      }
+    } else {
+      let modalCheckLabel = modalForm.querySelector('.contact-form__label');
+      modalCheckLabel.classList.add('invalid');
+    }
+
   });
 })();

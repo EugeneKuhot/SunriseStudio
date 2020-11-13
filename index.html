@@ -1084,35 +1084,37 @@
 
         <div class="contact-form__input-wrap">
           <div class="contact-form__text-wrap">
-            <label>Имя</label>
-            <input type="text" required class="contact-form__text-input">
+            <label for="modal-name">Имя</label>
+            <input id="modal-name" type="text" required class="contact-form__text-input">
           </div>
           <div class="contact-form__text-wrap">
-            <label>Электронная почта</label>
-            <input type="email" required class="contact-form__text-input">
+            <label for="modal-email">Электронная почта</label>
+            <input id="modal-email" type="email" required class="contact-form__text-input">
           </div>
           <div class="contact-form__text-wrap">
-            <label>Номер телефона</label>
-            <input type="tel" required class="contact-form__text-input">
+            <label for="modal-phone">Номер телефона</label>
+            <input id="modal-phone" type="tel" required class="contact-form__text-input">
           </div>
           <div class="contact-form__textarea-wrap">
-            <label>Дополнительные данные</label>
-            <textarea name="addData" id="addData" cols="30" rows="10"></textarea>
+            <label for="modal-add-Data">Дополнительные данные</label>
+            <textarea name="modal-addData" id="modal-add-Data" cols="30" rows="10"></textarea>
           </div>
         </div>
 
         <div class="contact-form__interactive-wrap">
-          <input id="policy" type="checkbox">
-          <label for="policy" class="contact-form__label">Я согласен(а) на обработку моих персональных данных
+          <input id="modal-contact-policy" type="checkbox">
+          <label for="modal-contact-policy" class="contact-form__label">
+            Я согласен(а) на обработку моих персональных данных
           </label>
 
           <div class="contact-form__file-wrap">
-            <input type="file" id="file" name="file">
+            <input type="file" id="modal-contact-file" name="file">
 
-            <label class="contact-form__file-label" for="file">
+            <label class="contact-form__file-label" for="contact-file">
               <svg class="contact-form__paperclip">
                 <use xlink:href="#paperclip"></use>
               </svg>
+
               <span>Прикрепить файл</span>
             </label>
           </div>

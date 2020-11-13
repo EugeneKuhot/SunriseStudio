@@ -2,7 +2,7 @@
 
 (function () {
 
-  const formFile = document.querySelector(`.contact-form__wrap #file`);
+  const formFile = document.querySelector(`.contact-form__wrap #modal-contact-file`);
   const contactFormFile = document.querySelector(`#contact-file`);
   const fileLabel = document.querySelector(`.contact-form__wrap .contact-form__file-label span`);
   const contactFileLabel = document.querySelector(`.contact .contact-form__file-label span`);
