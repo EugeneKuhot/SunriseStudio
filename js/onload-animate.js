@@ -27,10 +27,6 @@
   function onloadAnimation() {
     headerOnloadAnimation();
     setTimeout(greetingsTextBlockAnimate, 500);
-
-    setTimeout(function () {
-      window.slider.portfolioPopup.classList.remove('hidden');
-    }, 500);
   }
 
   window.addEventListener(`load`, onloadAnimation);
