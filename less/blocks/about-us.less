@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   position: relative;
-  height: 680px;
+  min-height: 680px;
   background: #1E1E1E;
+  overflow: hidden;
 }
 
 .about-us .container {
@@ -16,9 +17,22 @@
 }
 
 .about-us__title {
-  color: #FF961B;
+  position: relative;
+  width: fit-content;
+  color: #FFF;
   font-weight: 800;
   line-height: 80px;
+}
+
+.about-us__title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  bottom: 0;
+  background: #ff8a00;
 }
 
 .about-us__desc {
@@ -68,6 +82,10 @@
   content: '';
   display: block;
   background: #FFFFFF;
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  right: -499px;
 }
 
 .animated .bounce-in-left {
@@ -81,7 +99,6 @@
   opacity: 1;
   animation: bounce-in-right 1.1s both;
 }
-
 
 @-webkit-keyframes bounce-in-left {
   0% {
@@ -295,10 +312,10 @@
   }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .about-us {
     height: auto;
+    margin-top: -1px;
   }
 
   .about-us__desc-wrap {
@@ -321,19 +338,27 @@
   }
 
   .about-us__title {
-    color: #FFFFFF;
+    color: #FF961B;
     position: relative;
     width: fit-content;
   }
 
   .about-us__title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 8px;
+    display: none;
+  }
+
+  .about-us__cite span {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us .container {
+    width: 85%;
+  }
+
+  .about-us__cite span {
     width: 100%;
-    bottom: 0;
-    background: #ff8a00;
   }
 
 }
