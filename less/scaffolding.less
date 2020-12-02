@@ -96,3 +96,13 @@ input[type="checkbox"]:checked + label::before {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 768px) {
+  input[type="checkbox"] + label::before,
+  input[type="checkbox"]:checked + label::before {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+
+}

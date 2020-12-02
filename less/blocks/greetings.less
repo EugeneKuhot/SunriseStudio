@@ -334,6 +334,16 @@
     font-size: 15px;
     line-height: 15px;
     margin-bottom: 65px;
+    transform: translateY(100px);
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .greetings__mobile-list.onload {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .5s ease;
   }
 
   .greetings__mobile-list::before {
