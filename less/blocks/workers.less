@@ -4,6 +4,9 @@
   background: #1E1E1E;
   margin-top: -1px;
 }
+.workers {
+  padding-top: 45px;
+}
 
 .workers::before {
   content: '';
@@ -12,7 +15,7 @@
   height: 8px;
   position: absolute;
   right: 0;
-  top: 206px;
+  top: 250px;
   background: #FFFFFF;
 }
 
@@ -26,7 +29,7 @@
   width: 45%;
   height: 8px;
   position: absolute;
-  top: 206px;
+  top: 205px;
   right: 0;
   background: #FFFFFF;
 }
@@ -41,7 +44,7 @@
   justify-content: space-between;
   position: relative;
   width: 50%;
-  margin-top: 95px;
+  margin-top: 45px;
 }
 
 
@@ -167,6 +170,7 @@
   -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
   animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
+
 @-webkit-keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
@@ -183,6 +187,7 @@
     opacity: 1;
   }
 }
+
 @keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
@@ -199,10 +204,12 @@
     opacity: 1;
   }
 }
+
 .remove-worker {
   -webkit-animation: swing-out-top-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
   animation: swing-out-top-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
 }
+
 @-webkit-keyframes swing-out-top-bck {
   0% {
     -webkit-transform: rotateX(0deg);
@@ -219,6 +226,7 @@
     opacity: 0;
   }
 }
+
 @keyframes swing-out-top-bck {
   0% {
     -webkit-transform: rotateX(0deg);
@@ -254,6 +262,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
