@@ -219,6 +219,11 @@
   animation-duration: 11s;
 }
 
+.greetings__picture {
+  display: flex;
+  justify-content: center;
+}
+
 @keyframes animate {
 
   0% {
@@ -270,15 +275,17 @@
   .greetings__title {
     font-size: 40px;
   }
+}
 
+@media (max-width: 1100px) {
   .greetings__devices-img {
-    width: calc(60% + 1.1vw);
+    width: calc(105% + 1.1vw);
   }
 }
 
 @media (max-width: 740px) {
   .greetings__devices-img {
-    margin-left: calc(-35px - 1.1vw);
+    display: none;
   }
 }
 
@@ -300,10 +307,6 @@
   .greetings__start-btn {
     margin-bottom: -25px;
     z-index: 2;
-  }
-
-  .greetings__devices-img {
-    display: none;
   }
 
   .greetings__desc-block {
@@ -379,14 +382,6 @@
   .area {
     width: 100%;
     height: calc(100% - 80px);
-  }
-
-  .about-us__title::before {
-    display: none;
-  }
-
-  .about-us .about-us__title {
-    color: #FF961B;
   }
 }
 
