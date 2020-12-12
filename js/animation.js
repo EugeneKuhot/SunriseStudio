@@ -10,9 +10,15 @@
 
   const allBlocksForAnimation = [aboutUsBlock, workersBlock, servicesBlock, portfolioBlock, contactBlock];
 
-  let options = {
+  var options = {
     threshold: .4
   };
+
+  if (document.documentElement.clientWidth < 768) {
+    var options = {
+      threshold: .1
+    };
+  }
 
   function aboutUsAnimation(entries, observer) {
     entries.forEach(entry => {

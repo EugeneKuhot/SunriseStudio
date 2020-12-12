@@ -5,11 +5,10 @@
   let tabItems = tabsBlock.querySelectorAll('.services__tabs-item button');
 
   let webPagesWrap = document.querySelector('.services__webpages-wrap');
-  let webMarketingWrap = document.querySelector('.services__webmarketing-wrap');
   let designWrap = document.querySelector('.services__design-wrap');
   let copywriteWrap = document.querySelector('.services__copywrite-wrap');
 
-  let wraps = [webPagesWrap, webMarketingWrap, designWrap, copywriteWrap];
+  let wraps = [webPagesWrap, designWrap, copywriteWrap];
 
   function getActiveTabItem (item) {
     tabItems.forEach(el => el.classList.remove('active'));
@@ -34,7 +33,6 @@
     getActiveServiceList();
   }));
 
-
   let allServiceBtns = tabsBlock.querySelectorAll('.services__service-list button');
 
   function getActiveServiceBtn (item) {
@@ -57,8 +55,6 @@
   allServiceBtns.forEach(el => el.addEventListener('click', function () {
     getServiceDescription(el);
     getActiveServiceBtn(el);
-
-  }))
-
+  }));
 
 })();
