@@ -145,3 +145,25 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 1050px) {
+  .services__tabs {
+    flex-wrap: wrap;
+  }
+
+  .services__tabs-item {
+    width: 50%;
+    height: 60px;
+  }
+
+  .services__tabs-item button.active::before {
+    bottom: 0px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .services .container {
+    width: 85%;
+  }
+}

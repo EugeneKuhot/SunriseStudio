@@ -148,7 +148,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .portfolio,
   .portfolio .container {
     height: auto;
@@ -160,6 +160,7 @@
 
   .slider__item {
     max-width: 100%;
+    padding: 15px 0;
   }
 
   .slider__item:nth-child(even) {
@@ -168,5 +169,20 @@
 
   .slider__control {
     display: none;
+  }
+
+  .portfolio__desc {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio .container {
+    width: 85%;
+  }
+
+  .slider__item img {
+    width: 100%;
+    height: auto;
   }
 }
